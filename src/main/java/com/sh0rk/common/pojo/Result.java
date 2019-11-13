@@ -2,6 +2,8 @@ package com.sh0rk.common.pojo;
 
 import com.sh0rk.common.code.BaseCode;
 import com.sh0rk.common.enums.CommonCodeEnum;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,22 +14,26 @@ import java.io.Serializable;
  * @param <T>  返回的实体类
  * @author sh0rk
  */
+@ApiModel("通用返回结果对象")
 public class Result<T> implements Serializable {
     /**
      * 状态吗
      */
+    @ApiModelProperty("状态码")
     @Getter
     private Integer code;
 
     /**
      * 结果信息
      */
+    @ApiModelProperty("结果信息")
     @Getter
     private String message;
 
     /**
      * 实体对象
      */
+    @ApiModelProperty("实体对象")
     @Getter
     @Setter
     private T entity;

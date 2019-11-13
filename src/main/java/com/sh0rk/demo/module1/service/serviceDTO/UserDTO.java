@@ -1,4 +1,4 @@
-package com.sh0rk.demo.module1.service.model;
+package com.sh0rk.demo.module1.service.serviceDTO;
 
 import lombok.Data;
 
